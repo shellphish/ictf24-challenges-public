@@ -1,0 +1,2 @@
+# The Calabrian Programmer
+An ancient man from Calabria, Italy once taught me how to code computer programs. Ever since then I practiced a lot, as practice makes perfect. Why don't you try me? I can show you how good I am :) at generating computer programs for you and your friends. Oh, and, there is also one more thing: he told me "Don't ever, EVER, put your secrets in the code, or if you do it, don't store them in plain form. That should make your programs secure enough to stand the test of time ... ". 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boing</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+  <a href="/">Home</a>
+  <h1>Boing</h1>
+  {% if username %}
+    <p>Welcome, {{ username }}!</p>
+    <p><a href="/logout">Logout</a> <a href="/upload">Upload</a></p>
+  {% else %}
+    <p><a href="/login">Login</a> <a href="/register">Register</a></p>
+  {% endif %}
+  <p>
+    Welcome to Boing! Boing is a simple image sharing service.
+    We analyze your images and provide you with a score based on how
+    interesting we think they are.
+  </p>
+  {% if username %}
+    <hr />
+    <h2>Unprocessed Images</h2>
+    {% for file in unprocessed_files %}
+      <form action="/process" method="post">
+        <input type="hidden" name="file_name" value="{{ file }}">
+        <span style="display: inline">
+            <button type="submit">Process</button>
+            {{ file }}
+        </span>
+      </form>
+    {% endfor %}
+    <h2>Processed Images</h2>
+    {% for file, score in processed_files %}
+      <p>
+        <a href="/get/{{ file }}">{{ file }}</a> (<a href="/get/{{ file }}.meta">META</a>)
+        {% if score > 100_000 %}
+            SCORE: {{ score }} (🔥) {{ flag }}
+        {% else %}
+            SCORE: {{ score }}
+        {% endif %}
+      </p>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

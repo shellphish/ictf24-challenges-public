@@ -1,0 +1,42 @@
+name: HackChatAI
+author: ammonia
+category: web
+description: Why rely on humans for conversation when AI can handle it for you?
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: http
+host: null
+connection_info: https://ictf24-high-hackchatai.chals.io
+healthcheck: null
+
+flags:
+- ictf{well_d0n3_on_s0lv1ng_th1s_ch4ll3ng3_hackchatai24}
+
+files:
+- HackChatAI.zip
+
+topics:
+- web security
+- web application security
+- chatbot security
+
+tags:
+- web
+- security
+- chatbot
+
+hints:
+- content: Stored XSS can cause serious damage in AI applications, Is the admin page
+    safe?
+  cost: 50
+
+state: hidden
+
+version: '0.1'

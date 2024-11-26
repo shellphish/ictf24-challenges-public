@@ -1,0 +1,18 @@
+Flip phone beeps. 
+
+.. .. .. 
+.. .. ..
+.. .. ..
+
+Hey (insert CTF players name)!
+
+damn, yesterday was rough… remember that me and a couple of friends went out for partying? Apparently, the combination of non-alcoholic beverages, good vibes and burgers made me lose control… seems like I got on a plane and went some place in the United States. Now that I have recovered from my party induced coma, I have absolutely no clue where I am.
+
+All I know is that I can see a something high, maybe a monument? I would say it's within around 100m of the building's roof I woke up on.
+My watch tells me that the building is 35.9 meters high. Now listen, I'm kinda lost and I need to get to this thing tomorrow. Can you help me figure out where I am?
+
+Also, can you find the nearest airport that only has two runways?
+
+Flag format: The name of the building I am on, followed by the name of the monument nearby and the IATA code of the airport. All lower case, replace spaces with "_"
+
+Example: ictf{first_building_the_thing_airportcode}

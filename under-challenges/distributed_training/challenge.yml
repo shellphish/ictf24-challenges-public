@@ -1,0 +1,37 @@
+name: distributed_training
+author: nsigma
+category: pwn
+description: >-
+  a server is set up to accept a 4x4 matrix upload in .pt format (e.g., you upload
+  matA). The server will then return the results of the multiplication matA * matB,
+  where matB is a secret matrix stored on the server. Can you get the flag?
+value: 100
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: http
+host: null
+connection_info: https://ictf24-under-distributed-training.chals.io
+healthcheck: null
+
+flags:
+- ictf{b4d_d353r14l_p1ckl3_0MG_xx}
+
+files:
+- src/app.py
+- src/compute.py
+
+topics:
+- remote applications
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

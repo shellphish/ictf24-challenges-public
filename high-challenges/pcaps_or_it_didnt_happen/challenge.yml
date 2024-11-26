@@ -1,0 +1,55 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "pcaps or it didn't happen"
+author: "Stijn"
+category: "forensic"
+description: "Your computer has been acting weirdly lately and you suspect that some malicious actors are targetting your system. You therefore decided to run a network capture to see what type of traffic is hitting your machine. We did some preliminary filtering of the traffic and suspect indeed some malicious traffic hitting your system. Can you identify the malicious packets to obtain the flag?"
+
+
+Hints:
+- Try using tools like Wireshark to take an initial look at the traffic
+- Use python to read in the pcap file an extract features.
+- Perhaps you can do some anomaly detection on the traffic to discover interesting patterns?
+
+#value: 500
+
+type: dynamic
+extra:
+    initial: 500
+    decay: 10
+    minimum: 50
+
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries of CTFd API data
+flags:
+    - ictf{D1d_y0u_f1nD_wH4t_y0U_Wh3r3_l00k1nG_f0r}
+
+# Topics are used to help tell what techniques/information a challenge involves
+# They are generally only visible to admins
+# Accepts strings
+topics:
+    - Network Security
+    - Anomaly Detection
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+    - network
+
+files:
+    - src/network_traffic.pcap
+
+
+# The state of the challenge.
+# If the field is omitted, the challenge is visible by default.
+# If provided, the field can take one of two values: hidden, visible.
+state: hidden
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

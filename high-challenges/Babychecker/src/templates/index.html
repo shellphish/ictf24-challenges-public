@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babychecker</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        async function sendData(event) {
+            event.preventDefault();
+            const data = document.getElementById('data').value;
+            try {
+                const response = await fetch('/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({ data: data })
+                });
+                const result = await response.json();
+
+                if (result.res === 'hacker') {
+                    document.getElementById('resultFrame').srcdoc = `<p style='color:red;'>Access Denied</p>`;
+                } else {
+                    document.getElementById('resultFrame').srcdoc = result.res;
+                }
+
+                document.getElementById('reason').textContent = result.reason;
+                document.getElementById('resultContainer').style.display = 'block';
+            } catch (error) {
+                document.getElementById('resultFrame').srcdoc = `<p style='color:red;'>Error occurred</p>`;
+                document.getElementById('reason').textContent = "Reason: Unknown error";
+                document.getElementById('resultContainer').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="terminal">
+            <h1 class="glitch" data-text="Babychecker">Babychecker!</h1>
+            <form onsubmit="sendData(event)">
+                <div class="input-group">
+                    <label for="data">Enter your link:</label>
+                    <br>
+                    <input type="text" name="data" id="data" placeholder="Type here..." required>
+                </div>
+                <button type="submit" class="btn">Send</button>
+            </form>
+
+            <div id="resultContainer" style="display:none;">
+                <h2 class="glitch" data-text="Result">Result</h2>
+                <iframe id="resultFrame" class="iframe-output" srcdoc="" frameborder="0"></iframe>
+                <p id="reason"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+name: poppy
+author: Robert McLaughlin (p_nack)
+category: programming
+description: Let's play a game! Beat my AI and I'll give you the flag. Good luck!
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: tcp
+host: null
+connection_info: nc 0.cloud.chals.io 30265
+
+flags:
+- ictf{k33p_1t_uP_4nd_1t_w1ll_b3_0k4y}
+
+topics:
+- remote applications
+- game strategies
+- planning
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

@@ -1,0 +1,17 @@
+{
+    "name": "the-stand",
+    "version": "1.0.0",
+    "description": "A CTF challenge involving Neo4j query injection based on characters from Stephen King's 'The Stand'.",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "body-parser": "^1.20.2",
+      "neo4j-driver": "^5.8.0"
+    },
+    "author": "zanardi",
+    "license": "MIT"
+  }
+  

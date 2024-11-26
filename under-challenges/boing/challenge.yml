@@ -1,0 +1,33 @@
+name: Boing
+author: p_nack
+category: web
+description: A fun app for your images!
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: http
+host: null
+connection_info: https://ictf24-under-boing.chals.io
+healthcheck: null
+
+flags:
+- ictf{b01ng_b01ng_U_g0t_me}
+
+files:
+- src.zip
+
+topics:
+- web
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

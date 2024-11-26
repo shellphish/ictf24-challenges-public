@@ -1,0 +1,24 @@
+name: ictf_welcome
+author: zanardi
+category: intro
+description: |-
+  Welcome to the 2024 iCTF.
+  This is a warm-up challenge
+value: 100
+
+image: .
+protocol: tcp
+host: null
+connection_info: nc 0.cloud.chals.io 24970
+healthcheck: null
+
+flags:
+- ictf{ThisIsJustTheStart}
+
+topics:
+- remote applications
+
+tags:
+- remote applications
+
+version: '0.1'

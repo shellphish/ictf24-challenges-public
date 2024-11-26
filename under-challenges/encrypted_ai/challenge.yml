@@ -1,0 +1,33 @@
+name: "encrypted_ai"
+author: "saad_ullah"
+category: machine-learning
+description: A student has designed a PyTorch model and embedded a hidden flag within it. To add a layer of security, he encrypted the model using XOR encryption with a random 16-byte key before sharing it with his friends. However, the student forgot to save both the encryption key and the unencrypted model, making the task of revealing the hidden flag a puzzle.\n\nYour challenge is to recover the encryption key and decrypt the model to unveil the concealed information. The encrypted model file is provided i.e., `model_encrypted.pth`.\n\nGood luck, and happy decrypting!
+value: 200
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+state: hidden
+
+flags:
+  - ictf{XOR_Encryption_Is_Not_Secure}
+
+topics:
+  - cryptography
+  - forensics
+  - xor
+  - pytorch
+
+tags:
+  - cryptography
+  - xor
+  - pytorch
+  - forensics
+
+files:
+  - src/model_encrypted.pth
+  - README.md
+
+version: "0.1"

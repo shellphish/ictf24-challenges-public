@@ -1,0 +1,33 @@
+name: Babychecker
+author: 1chig0
+category: web
+description: This is a website that can visit links, can you GET the flag? :D
+value: 100
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: http
+host: null
+connection_info: https://ictf24-high-babychecker.chals.io
+healthcheck: null
+
+flags:
+- ictf{AI_Ch3ck3r_M1gh7_F4il}
+
+files:
+- src.zip
+
+topics:
+- remote applications
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

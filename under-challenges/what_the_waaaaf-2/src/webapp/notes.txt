@@ -1,0 +1,5 @@
+
+what-the-waf-2 is gonna be less challenging than what-the-waf-3 😈.
+
+To run:
+  - docker run -d -p 9999:9999 what-the-waf

@@ -1,0 +1,40 @@
+name: "doppelganger_deception"
+author: "mdy"
+category: "forensic"
+description: Identify the classifier containing a hidden message and recover the secret.
+value: 100
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: null
+
+protocol: null
+
+host: null
+
+connection_info: null
+
+healthcheck: null
+
+flags:
+  - ictf{Neural_Networks_Can_Keep_Secrets!}
+
+topics:
+  - neural_net forensics
+
+tags:
+  - forensics
+
+files:
+  - src/broken_script.py
+  - src/m1.pt
+  - src/m2.pt
+  - src/main.py
+  - src/readme.md
+
+state: hidden
+version: "0.1"
+

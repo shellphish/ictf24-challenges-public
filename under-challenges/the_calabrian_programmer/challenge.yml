@@ -1,0 +1,42 @@
+name: the_calabrian_programmer
+author: alessandro_mileto(aka ubersandro)
+category: programming
+description: >-
+  An ancient man from Calabria, Italy once taught me how to code computer programs.
+  Ever since then I practiced a lot, as practice makes perfect. Why don't you try
+  me? I can show you how good I am :) at generating computer programs for you and
+  your friends. Oh, and, there is also one more thing: he told me "Don't ever, EVER,
+  put your secrets in the code, or if you do it, don't store them in plain form. That
+  should make your programs secure enough to stand the test of time ... ".
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: tcp
+host: null
+connection_info: nc 0.cloud.chals.io 22223
+healthcheck: null
+
+flags:
+- ictf{calabrifornia}
+
+files:
+- src/challenge.py
+- materials/README.md
+
+topics:
+- cryptography
+- machine learning
+
+tags:
+- cryptography
+- ai-supported programming
+
+state: hidden
+
+version: '0.1'

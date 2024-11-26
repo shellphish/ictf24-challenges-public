@@ -1,0 +1,4 @@
+Imagine you are in 2029. You go to bed and suddenly you wake up in 1984. All naked. 
+What are the first five words that come to mind?
+
+The flag format ictf{the_words}

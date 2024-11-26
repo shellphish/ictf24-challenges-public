@@ -1,0 +1,42 @@
+
+CIMBER: 
+=================================================
+degrigis@cimber:~/projects/aictf$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.4 LTS
+Release:	22.04
+Codename:	jammy
+=================================================
+
+
+
+COMMANDS:
+=================================================
+
+sudo apt-get install libsasl2-dev python-dev-is-python3 libldap2-dev libssl-dev
+
+pip install flask-simpleldap
+
+sudo apt-get remove slapd
+
+sudo apg-get purge slapd
+
+sudo dpkg-reconfigure slapd
+  -> Here use admin:admin as password and example.com as domain
+
+sudo ldapadd -x -D "cn=admin,dc=example,dc=com" -W -f init.ldif
+  -> This initializes the users in the LDAP server.
+  -> Current flag is ictf{I_Gu3ss_LD4P_is_not_4_great_date}
+
+=================================================
+
+
+START WEBAPP:
+=================================================
+
+on your mac: ssh -L 9999:localhost:9999 cimber
+
+on cimber: cd /projects/aictf/
+           python app.py
+

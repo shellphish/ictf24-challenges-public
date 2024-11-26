@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.terminal {
+    background-color: #111;
+    border: 3px solid #00ff00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.5);
+    width: 400px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.glitch {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00ff00;
+    animation: glitch 1s infinite;
+}
+
+.glitch:before, .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00ff00;
+    background: #0d0d0d;
+    overflow: hidden;
+}
+
+.glitch:before {
+    left: 2px;
+    text-shadow: -2px 0 red;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-clip-1 2.5s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+    left: -2px;
+    text-shadow: -2px 0 blue;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-clip-2 3.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+    0% { transform: none; }
+    20% { transform: skew(-0.5deg, -0.9deg); }
+    40% { transform: skew(0.5deg, 0.9deg); }
+    60% { transform: none; }
+    80% { transform: skew(-0.5deg, -0.9deg); }
+    100% { transform: none; }
+}
+
+@keyframes glitch-clip-1 {
+    0% { clip: rect(0, 9999px, 0, 0); }
+    100% { clip: rect(0, 9999px, 100%, 0); }
+}
+
+@keyframes glitch-clip-2 {
+    0% { clip: rect(0, 9999px, 100%, 0); }
+    100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+input[type="text"] {
+    background-color: #0d0d0d;
+    border: 2px solid #00ff00;
+    padding: 10px;
+    color: #00ff00;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #00ff00;
+    color: #0d0d0d;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0aff0a;
+}
+
+.output {
+    background-color: #0d0d0d;
+    border: 2px solid #00ff00;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #00ff00;
+    word-wrap: break-word;
+}

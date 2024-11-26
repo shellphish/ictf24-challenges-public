@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button, input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #results, #people-results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Stand</h1>
+
+    <!-- Form to query a character's friends -->
+    <h2>Find Friends</h2>
+    <form id="friend-form">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" placeholder="First Name" required>
+        <br>
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" placeholder="Last Name" required>
+        <br>
+        <!--
+        <label for="debug">Debug:</label>
+        <input type="checkbox" id="debug" name="debug">
+        -->
+        <button type="submit">Get Friends</button>
+    </form>
+    <div id="results"></div>
+
+    <!-- Form to query all existing people -->
+    <h2>List All People</h2>
+    <form id="people-form">
+        <button type="submit">Get People</button>
+    </form>
+    <div id="people-results"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Query friends form handler
+        document.getElementById('friend-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            // Get form values
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+
+    
+            // Construct the API query URL
+            const url = `/friends?firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}`;
+
+            try {
+                // Fetch the response from the API
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Display the result
+                let output = '';
+                if (typeof data === 'object' && data.friends) {
+                    output += `<h3>${data.message}</h3>`;
+                    data.friends.forEach(friend => {
+                        output += `<p>${friend}</p>`;
+                    });
+                } else if (data.message) {
+                    output = `<h3>${data.message}</h3>`;
+                } else {
+                    output = `<p>No results found.</p>`;
+                }
+
+                document.getElementById('results').innerHTML = output;
+            } catch (error) {
+                console.error('Error fetching friends:', error);
+                document.getElementById('results').innerText = 'Failed to fetch data.';
+            }
+        });
+
+        // Query people form handler
+        document.getElementById('people-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            // Fetch the list of people
+            try {
+                const response = await fetch('/people');
+                const data = await response.json();
+
+                // Display the result
+                let output = '<h3>Existing People</h3>';
+                if (Array.isArray(data) && data.length > 0) {
+                    data.forEach(person => {
+                        output += `<p>${person.firstName} ${person.lastName}</p>`;
+                    });
+                } else {
+                    output += `<p>No people found.</p>`;
+                }
+
+                document.getElementById('people-results').innerHTML = output;
+            } catch (error) {
+                console.error('Error fetching people:', error);
+                document.getElementById('people-results').innerText = 'Failed to fetch data.';
+            }
+        });
+    </script>
+</body>
+</html>

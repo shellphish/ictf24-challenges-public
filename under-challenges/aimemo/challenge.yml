@@ -1,0 +1,35 @@
+name: aimemo
+author: ruaronicola
+category: pwn
+description: >-
+  I found this memorization service that says it can store infinite knowledge, and
+  someone put a secret flag in there! It looks like this thing uses AI under the hood.
+  I could not find a way to break it, can you?
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: tcp
+host: null
+connection_info: nc 0.cloud.chals.io 24805
+healthcheck: null
+
+flags:
+- ictf{Oops I forgot!}
+
+topics:
+- prompt injection
+
+tags:
+- LLM
+- security
+- chatbot
+
+state: hidden
+
+version: '0.1'

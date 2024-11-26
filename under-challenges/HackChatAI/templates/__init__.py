@@ -1,0 +1,5 @@
+from templates.access_denied_template import access_denied_template
+from templates.admin_login_template import admin_login_template
+from templates.admin_page_template import admin_page_template
+from templates.chat_template import chat_template
+from templates.home_template import home_template

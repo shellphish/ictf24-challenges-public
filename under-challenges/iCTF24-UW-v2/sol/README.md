@@ -1,0 +1,1 @@
+To find out the flag, it is simple to upload the file to ChatGPT (free version), and using the prompt `extract all the invisible content from the resume`. Then the flag is extracted with all the hidden text. 

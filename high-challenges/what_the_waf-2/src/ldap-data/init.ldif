@@ -1,0 +1,267 @@
+dn: ou=users,dc=example,dc=com
+objectClass: organizationalUnit
+ou: users
+
+dn: cn=admin,dc=example,dc=com
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+
+dn: uid=user1,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: user1
+sn: User
+cn: User One
+userPassword: password123
+
+dn: uid=alice,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: alice
+sn: Wonderland
+cn: Alice Wonderland
+userPassword: CheshireCat99
+
+dn: uid=bob,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: bob
+sn: Builder
+cn: Bob Builder
+userPassword: CanWeFixIt123
+
+dn: uid=charlie,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: charlie
+sn: Brown
+cn: Charlie Brown
+userPassword: Snoopy123
+
+dn: uid=david,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: david
+sn: Beckham
+cn: David Beckham
+userPassword: SoccerStar99
+
+dn: uid=eva,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: eva
+sn: Green
+cn: Eva Green
+userPassword: CasinoRoyale007
+
+dn: uid=frank,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: frank
+sn: Sinatra
+cn: Frank Sinatra
+userPassword: FlyMeToTheMoon
+
+dn: uid=george,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: george
+sn: Clooney
+cn: George Clooney
+userPassword: OceansEleven
+
+dn: uid=harry,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: harry
+sn: Potter
+cn: Harry Potter
+userPassword: Expelliarmus123
+
+dn: uid=irene,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: irene
+sn: Adler
+cn: Irene Adler
+userPassword: Sherlock123
+
+dn: uid=john,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: john
+sn: Wick
+cn: John Wick
+userPassword: BabaYaga123
+
+dn: uid=kate,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: kate
+sn: Winslet
+cn: Kate Winslet
+userPassword: Titanic1997
+
+dn: uid=leo,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: leo
+sn: DiCaprio
+cn: Leo DiCaprio
+userPassword: Inception123
+
+dn: uid=mary,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: mary
+sn: Poppins
+cn: Mary Poppins
+userPassword: Supercalifragilistic
+
+dn: uid=nathan,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: nathan
+sn: Drake
+cn: Nathan Drake
+userPassword: Uncharted123
+
+dn: uid=oliver,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: oliver
+sn: Twist
+cn: Oliver Twist
+userPassword: PleaseSir123
+
+dn: uid=peter,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: peter
+sn: Parker
+cn: Peter Parker
+userPassword: SpiderMan123
+
+dn: uid=quinn,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: quinn
+sn: Harper
+cn: Quinn Harper
+userPassword: MysteryMan123
+
+dn: uid=rachel,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: rachel
+sn: Green
+cn: Rachel Green
+userPassword: Friends1994
+
+dn: uid=sam,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: sam
+sn: Winchester
+cn: Sam Winchester
+userPassword: Supernatural123
+
+dn: uid=terry,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: terry
+sn: Crews
+cn: Terry Crews
+userPassword: Brooklyn99
+
+dn: uid=ursula,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: ursula
+sn: Andress
+cn: Ursula Andress
+userPassword: DrNo1962
+
+dn: uid=victor,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: victor
+sn: Frankenstein
+cn: Victor Frankenstein
+userPassword: GothicNovel123
+
+dn: uid=wade,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: wade
+sn: Wilson
+cn: Wade Wilson
+userPassword: Deadpool123
+
+dn: uid=xena,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: xena
+sn: Warrior
+cn: Xena Warrior
+userPassword: Princess123
+
+dn: uid=yara,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: yara
+sn: Greyjoy
+cn: Yara Greyjoy
+userPassword: IronBorn123
+
+dn: uid=zane,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: zane
+sn: Donovan
+cn: Zane Donovan
+userPassword: Eureka123
+
+dn: uid=tony,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: tony
+sn: Stark
+cn: Tony Stark
+userPassword: IronMan2008
+
+dn: uid=luke,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: luke
+sn: Skywalker
+cn: Luke Skywalker
+userPassword: JediMaster123
+
+dn: uid=bruce,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: bruce
+sn: Wayne
+cn: Bruce Wayne
+userPassword: Batman123
+
+dn: uid=diana,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: diana
+sn: Prince
+cn: Diana Prince
+userPassword: WonderWoman123
+
+dn: uid=clark,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: clark
+sn: Kent
+cn: Clark Kent
+userPassword: Superman123
+
+dn: uid=wanda,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: wanda
+sn: Maximoff
+cn: Wanda Maximoff
+userPassword: ScarletWitch123
+
+dn: uid=steve,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: steve
+sn: Rogers
+cn: Steve Rogers
+userPassword: CaptainAmerica123
+
+dn: uid=brucebanner,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: brucebanner
+sn: Banner
+cn: Bruce Banner
+userPassword: Hulk123
+
+dn: uid=peterquill,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: peterquill
+sn: Quill
+cn: Peter Quill
+userPassword: StarLord123
+
+dn: uid=tonystark,ou=users,dc=example,dc=com
+objectClass: inetOrgPerson
+uid: tonystark
+sn: Stark
+cn: Tony Stark
+userPassword: ictf{Th0ught_Th3_WAF_Was_My_Sh1eld}

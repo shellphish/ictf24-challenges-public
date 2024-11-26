@@ -1,0 +1,26 @@
+name: linear_labyrinth
+author: 0xk4l1
+category: misc
+description: |-
+  
+  **author**: 0xk4l1
+value: 500
+type: dynamic
+tags:
+  - misc
+  - ai
+  - medium
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+flags:
+  - ictf{linear_aggression}
+files:
+  - challenge/chal.py
+  - challenge/model.py
+  - challenge/out.png
+  - challenge/model.pth
+# This is visible by default. It takes two values: hidden, visible.
+state: hidden
+version: "0.1"

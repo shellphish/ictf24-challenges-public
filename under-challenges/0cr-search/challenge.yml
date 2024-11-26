@@ -1,0 +1,61 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Can you hear the 0CR Searcher?"
+author: "Raymond Muller"
+category: "programming"
+description: "Hard-coded text in video information is not uncommon in the increasingly vast digital landscape.
+However, for long-form videos, it can be tiresome to watch an entire video to get its content.
+Further, extracting information from the audio channel of some videos can be unreliable, due to accents, foreign languages, in more.
+
+In this undergrad challenge, you will extract the encoded text information in a long-form video file using Optical Character Recognition (OCR).  
+OCR is a process whereby text is recognized and extracted from images/videos using computer vision, which can be outputted to a file.
+Once you have extracted the text information, search the file for the word \"flag\", and the flag will be directly written (and stated) in the same sentence.
+
+Hints:
+- You might consider using audio recognition approaches to transcribe the audio channel (e.g., with pyTranscriber), which may be faster, but much less accurate.
+- In order to speed up OCR on video, you may consider dropping the framerate of the video (e.g., using ffmpeg) in order to reduce OCR operations on redundant frames.
+"
+
+value: 250
+type: dynamic
+extra:
+    initial: 500
+    decay: 10
+    minimum: 50
+
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries of CTFd API data
+flags:
+    - ictf{Hokago Tea Time}
+    - ictf{Ho kago Tea Time}
+    - ictf{Hokago TeaTime}
+
+# Topics are used to help tell what techniques/information a challenge involves
+# They are generally only visible to admins
+# Accepts strings
+topics:
+    - Computer Vision
+    - Optical character recognition
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+    - Computer vision
+
+files:
+    - src/movie.mp4
+
+
+# The state of the challenge.
+# If the field is omitted, the challenge is visible by default.
+# If provided, the field can take one of two values: hidden, visible.
+state: hidden
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

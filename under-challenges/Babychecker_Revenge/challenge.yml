@@ -1,0 +1,33 @@
+name: Babychecker_Revenge
+author: 1chig0
+category: web
+description: This is another website that can visit links, can you GET the flag? :D
+value: 100
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: http
+host: null
+connection_info: https://ictf24-under-babychecker-revenge.chals.io
+healthcheck: null
+
+flags:
+- ictf{U_4r3_55RF_Exp3e7_N0w}
+
+files:
+- src.zip
+
+topics:
+- remote applications
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

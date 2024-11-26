@@ -1,0 +1,35 @@
+name: gpt_calculator
+author: nsigma
+category: pwn
+description: >-
+  You can interact with a calculator powered by ChatGPT, which is enhanced with a
+  python executor. You can ask it to compute math problems. Can you get the flag.txt?
+value: 100
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+image: .
+protocol: tcp
+host: null
+connection_info: nc 0.cloud.chals.io 26042
+healthcheck: null
+
+flags:
+- ictf{don7_7ru57_9p75_cod3}
+
+files:
+- src/challenge.py
+
+topics:
+- remote applications
+
+tags:
+- remote applications
+
+state: hidden
+
+version: '0.1'

@@ -1,0 +1,6 @@
+flask
+Flask-Limiter
+requests
+selenium
+webdriver-manager
+openai

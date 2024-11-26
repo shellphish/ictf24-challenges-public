@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 250px;
+            background: #f9f9f9;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .username {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .info {
+            font-size: 1em;
+            color: #333;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #0b8000;
+            font-size: 1.1em;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> Crypto Bros, Inc. </h1>
+        <h3>   - Earn crypto, become a bro! </h>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="username">{{ username }}</div>
+            <div class="bio">{{ message }}</div>
+            <div class="info">
+                <p><strong>Investement:</strong> {{eth}}  ETH </p>
+                <p><strong>Investement:</strong> {{btc}}  BTC </p>
+                <p><strong>Investement:</strong> {{pepe}} PEPE </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Crypto Bros Inc. All rights reserved.
+    </div>
+</body>
+</html>
