@@ -29,7 +29,7 @@ Response with JSON format.
                 "content": check_prompt,
             }
         ],
-        model="oai-gpt-3.5-turbo",
+        model=os.environ.get("OPENAI_MODEL"),
         max_tokens=1000,
         response_format={"type": "json_object"}
     )
